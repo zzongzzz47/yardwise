@@ -146,7 +146,7 @@ function renderBenchmarks(){
   $('modelComparison').innerHTML=`<tr><td>학습한 AI</td><td>${num(ai.total)}회</td><td>${ai.mean_decision_ms.toFixed(2)}ms</td></tr><tr><td>미래 탐색 24개</td><td>${num(search.total)}회</td><td>${search.mean_decision_ms.toFixed(2)}ms</td></tr>`;
   const gap=ai.total-search.total;
   $('searchComparison').textContent=`${gap>0?`미래 탐색에서 재취급이 ${num(gap)}회 더 적었습니다.`:gap<0?`AI에서 재취급이 ${num(-gap)}회 더 적었습니다.`:'두 방법의 재취급 횟수는 같았습니다.'} AI의 계산시간은 미래 탐색의 약 ${(100*ai.mean_decision_ms/search.mean_decision_ms).toFixed(0)}%였습니다. 이 화면의 실시간 추천에는 새로 학습한 AI를 사용합니다.`;
-  $('trainingDescription').textContent=`학습 원본 ${num(t.original_cases)}개 각각을 높이 우선, 출고 우선순위, 확률 위험, 무작위 이동의 네 방식으로 독립적으로 진행했습니다. 총 ${num(t.trajectories)}개 경로에서 발생한 이동 판단 ${num(t.decisions)}번을 건너뛰지 않고 평가하여 후보별 학습자료 ${num(t.rows)}건을 만들었습니다.`;
+  $('trainingDescription').textContent = `학습 원본 ${num(t.original_cases)}개 각각을 높이 우선, 출고 우선순위, 확률 위험, 무작위 이동의 네 방식으로 독립적으로 진행했습니다.`;
   const routeNames={height:'높이 우선',mean:'출고 우선순위',risk:'확률 위험',random:'무작위 이동'};
   $('trainingRoutes').innerHTML=Object.entries(t.by_route).map(([key,r])=>`<tr><td>${routeNames[key]}</td><td>${num(r.trajectories)}</td><td>${num(r.decisions)}</td><td>${num(r.rows)}</td></tr>`).join('');
   $('modelProvenance').textContent=`모형 갱신 ${model.updated_date} · ${model.trees}개 회귀나무 · 입력 변수 ${model.features}개`;
