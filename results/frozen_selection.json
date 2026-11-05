@@ -1,0 +1,8 @@
+{
+  "primary": "learned",
+  "model_sha256": "582601eb58f6e08d2edf59c00b61d441ca8909633ca1a86819897eb2f0dd86e7",
+  "frozen_utc": "2026-10-27T19:26:33.274248+00:00",
+  "extra_test_training": false,
+  "reason": "Fixed user-requested collection revision; same model parameters; no tuning.",
+  "evaluation_is_reused_benchmark": true
+}

@@ -1,0 +1,50 @@
+{
+  "all_passed": true,
+  "trace_replays": 1120,
+  "disjoint_initial_layouts": {
+    "train/test": 0,
+    "train/validation": 0,
+    "validation/test": 0
+  },
+  "exact_small_cases": [
+    {
+      "id": "4-3-6-10",
+      "perfect_information_optimum": 1
+    },
+    {
+      "id": "4-3-6-11",
+      "perfect_information_optimum": 3
+    },
+    {
+      "id": "4-3-6-8",
+      "perfect_information_optimum": 1
+    },
+    {
+      "id": "4-3-6-9",
+      "perfect_information_optimum": 0
+    },
+    {
+      "id": "4-3-8-10",
+      "perfect_information_optimum": 3
+    },
+    {
+      "id": "4-3-8-11",
+      "perfect_information_optimum": 4
+    },
+    {
+      "id": "4-3-8-8",
+      "perfect_information_optimum": 2
+    },
+    {
+      "id": "4-3-8-9",
+      "perfect_information_optimum": 3
+    }
+  ],
+  "future_tail_invariance_checks": 60,
+  "layout_convention": "lists treated bottom to top, last is crane-accessible",
+  "limits": [
+    "Single bay, homogeneous boxes, one relocation at a time; no new arrivals.",
+    "Frozen published probabilities. No local terminal prediction model was trained.",
+    "No measured time, energy, emissions or field savings are claimed."
+  ]
+}

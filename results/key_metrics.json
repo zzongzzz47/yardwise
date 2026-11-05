@@ -1,0 +1,25 @@
+{
+  "cases": 224,
+  "containers": 4132,
+  "baseline": 2118,
+  "ai": 1919,
+  "relocation_saving_percent": 9.395656279508971,
+  "all_moves_saving_percent": 3.184,
+  "informed_risk_saving_percent": 8.400954653937948,
+  "naive_saving_percent": 18.755292125317528,
+  "lookahead_saved": 229,
+  "ai_vs_search_relocation_difference": 30,
+  "better": 105,
+  "same": 118,
+  "worse": 1,
+  "old_ai": 1929,
+  "new_vs_old_saving": 10,
+  "new_vs_old_cases": {
+    "same": 208,
+    "worse": 6,
+    "better": 10
+  },
+  "old_collection_rows": 10462,
+  "new_collection_rows": 89456,
+  "evaluation_is_previously_used_benchmark": true
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290">
+<rect width="1200" height="290" rx="18" fill="#111c30"/>
+<rect x="0" y="0" width="10" height="290" fill="#84b1ff"/>
+<circle cx="1130" cy="240" r="155" fill="#84b1ff" opacity=".13"/>
+<circle cx="1130" cy="240" r="110" fill="none" stroke="#84b1ff" stroke-width="2" opacity=".5"/>
+<g font-family="Arial, Apple SD Gothic Neo, Malgun Gothic, sans-serif"><text x="55" y="63" fill="#84b1ff" font-size="19" letter-spacing="3">PORT AX / LEARNING TO RELOCATE</text>
+<text x="55" y="139" fill="#ffffff" font-size="37" font-weight="700">컨테이너 재취급 감소 · 이동 위치 추천</text>
+<text x="55" y="195" fill="#bdcbe0" font-size="21">후보 위치의 후속 작업량을 학습해 다음 이동을 추천하는 Yardwise</text>
+<text x="55" y="251" fill="#7d94b5" font-size="15">RESEARCH QUESTION / ANALYSIS CODE / REPORT / RESULTS</text></g></svg>

@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-27T19:24:55.944950+00:00",
+  "revision": "four_policies_full_20261028",
+  "collection_routes": [
+    "height",
+    "mean",
+    "risk",
+    "random"
+  ],
+  "routes_per_training_case": 4,
+  "training_cases": 336,
+  "validation_cases": 112,
+  "evaluation_cases": 224,
+  "split": "Original suffix: train 0..5; validation 6..7; evaluation 8..11.",
+  "decision_stride": 1,
+  "all_legal_destinations_labeled": true,
+  "sampling": {
+    "training_futures": 12,
+    "comparison_lookahead_futures": 24,
+    "common_futures_across_destinations": true,
+    "independent_container_draws": true,
+    "within_period_ties": "uniform random",
+    "behavior_rng": "separate fixed stream per original case and route",
+    "label_rng": "stable hash of case, layout, current target; equal states receive equal futures"
+  },
+  "duplicate_states": "Retain every occurrence and every candidate row; no deduplication or reweighting.",
+  "random_route": "One reproducible uniformly random legal-destination trajectory per training case.",
+  "teacher": "One chosen relocation plus greedy rollout under each sampled complete future; mean cost centered among legal destinations.",
+  "known_information": "Layout, capacity, current request and supplied fixed probabilities; no actual future tail is passed to features, route selectors or label generation.",
+  "model": "ExtraTrees: 100 trees, depth 16, min leaf 8, max_features .9, seed 20261028, n_jobs 1; unchanged.",
+  "validation_role": "Check the fixed model; no tuning or favorable-result selection.",
+  "test_role": "Reanalysis of the previously examined 224-case benchmark, not a fresh unseen external holdout.",
+  "old_data_collection": "One mixed route per case, 25% random / 37.5% mean / 37.5% risk; every other decision labeled.",
+  "collection_counts_are_observed_not_targets": true,
+  "baseline_snapshot_sha256": "b055e5d84ad05a3cb920f26dca9e5dd205f19406f569aa577bf883c1348d0c48",
+  "legacy_model_sha256": "fa92128fc1233f40240648d51c3920e6b4d2d4e2bcfe31319372d51c7c3729ac",
+  "legacy_test_sha256": "332df5a2f09d72c3061b6544bafa880e25d282e179bd0c00807288a4672cf610",
+  "new_runner_sha256": "d5785d2a0bbf5320314633dfd8a837beb630bf3f547bdb67f29a2110c85fa36b",
+  "implementation_repairs": [
+    {
+      "utc": "2026-10-27T19:26:16.786067+00:00",
+      "previous_runner_sha256": "9ca07b3e1ec826ed07a7d6d981ea63d1ebfaa45f68521294fecf11e52933dbd0",
+      "reason": "Handle valid zero-relocation cases as a (0,40) input array. Collection/label/model design unchanged; no new model fitted or evaluated yet."
+    }
+  ]
+}

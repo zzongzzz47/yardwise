@@ -1,0 +1,92 @@
+{
+  "cases": 336,
+  "decisions": 14848,
+  "rows": 89456,
+  "original_cases": 336,
+  "trajectories": 1344,
+  "labeled_decisions": 14848,
+  "skipped_decisions": 0,
+  "unique_labeled_states": 12388,
+  "duplicate_state_occurrences": 2460,
+  "candidate_count_histogram": {
+    "1": 21,
+    "2": 260,
+    "3": 1453,
+    "4": 1861,
+    "5": 2296,
+    "6": 2544,
+    "7": 2540,
+    "8": 2269,
+    "9": 1604
+  },
+  "by_route": {
+    "height": {
+      "trajectories": 336,
+      "decisions": 3556,
+      "rows": 21920
+    },
+    "mean": {
+      "trajectories": 336,
+      "decisions": 3261,
+      "rows": 19350
+    },
+    "risk": {
+      "trajectories": 336,
+      "decisions": 3230,
+      "rows": 19480
+    },
+    "random": {
+      "trajectories": 336,
+      "decisions": 4801,
+      "rows": 28706
+    }
+  },
+  "features": [
+    "stacks",
+    "height",
+    "remaining",
+    "source_height",
+    "destination_height",
+    "current_target_mean",
+    "blocker_mean",
+    "blocker_std",
+    "blocker_entropy",
+    "destination_min_mean",
+    "destination_max_mean",
+    "destination_mean_mean",
+    "destination_min_gap",
+    "destination_max_gap",
+    "risk_sum",
+    "risk_max",
+    "risk_any",
+    "empty_stacks",
+    "free_slots",
+    "full_stacks",
+    "mean_stack_height",
+    "blocker_mean_rank",
+    "destination_mean_rank",
+    "destination_risk_mean",
+    "best_available_risk",
+    "state_inversion_sum",
+    "destination_spread",
+    "source_remaining_depth",
+    "blocker_p0",
+    "blocker_p1",
+    "blocker_p2",
+    "blocker_p3",
+    "blocker_p4",
+    "blocker_p5",
+    "blocker_p6",
+    "blocker_p7",
+    "blocker_p8",
+    "blocker_p9",
+    "blocker_p10",
+    "blocker_p11"
+  ],
+  "training_future_samples": 12,
+  "candidate_rollouts": 1073472,
+  "seconds": 2.267219499917701,
+  "all_occurrences_retained": true,
+  "same_state_label_consistency": true,
+  "future_benchmark_tail_used_as_label": false
+}
